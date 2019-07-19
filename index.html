@@ -74,7 +74,23 @@
         gender = putNumber(2);
         gender[M] = "Male"
         gender[F] = "Female"
-        
+
+        //week days function code
+        function compute(form) {
+          var YY = parseInt(form.years.value)
+          if (YY < 2000) {
+              alert("you are very young")
+          }
+          var MM = parseInt(form.months.value)
+          if ((MM < 0) || (MM > 12)) {
+              alert("invalid input")
+          }
+          var DD = parseInt(form.days.value)
+          if ((DD < 0) || (DD > 31)) {
+              alert("invalid input")
+          }
+        }
+              
         </script>
     <div class="well" style="margin-left:100px;margin-right:100px;">
         <div class="container text-center">
@@ -92,15 +108,15 @@
             <p><em>Enter your birthday and click on the submit button if not click on cancel.</em></p>
             
             <form>
-              <p>Enter month (1-12): <input type="text" name="months" size="3"> </p>
-              <p>Enter day of the month (1-31): <input type="text" name="days" size="3"> </p>
+              <p>Enter month: <input type="text" name="months" size="3"> </p>
+              <p>Enter day: <input type="text" name="days" size="3"> </p>
               <p>Enter the year: <input type="text" name="years" size="6"> </p>
 
               <p>Gender:</p>
               <p><input type="radio" name="gender" value="Male">Male</p>
               <p><input type="radio" name="gender" value="Female">Female</p>
 
-              <p><input type="button" value="submit" onclick="compute(this.form)"> 
+              <p><input type="button" value="submit" onclick="compute(form)"> 
                 <input type="reset" value="cancel"> </p>
 
               <p>Birth date: <input type="text" name="date" size="20"> </p>
@@ -109,7 +125,8 @@
             </form>
                         
 
-        </div>   
+        </div> 
+        <div style="text-align: center; font-weight: bold; color:white;">Copyright@Brenda</div>  
       
     
 </body>
