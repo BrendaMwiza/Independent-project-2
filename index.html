@@ -19,33 +19,15 @@
         
         //days code
         day = putNumber(7);
-        day[0] = "Saturday"
-        day[1] = "Sunday"
-        day[2] = "Monday"
-        day[3] = "Tuesday"
-        day[4] = "Wednesday"
-        day[5] = "Thursday"
-        day[6] = "Friday"
+        day["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
         // male akan names code
         name = putNumber(7);
-        name[0] = "Kwame"
-        name[1] = "Kwasi"
-        name[2] = "Kwadwo"
-        name[3] = "Kwabena"
-        name[4] = "Kwaku"
-        name[5] = "Yaw"
-        name[6] = "Kofi"
+        name["Kwame", "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi"];
 
         // female akan names code 
         name = putNumber(7);
-        name[0] = "Ama"
-        name[1] = "Akosua"
-        name[2] = "Adwoa"
-        name[3] = "Abenaa"
-        name[4] = "Akua"
-        name[5] = "Yaa"
-        name[6] = "Afua"
+        name["Ama", "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua"]
         
         //months code
         month = putNumber(12);
@@ -84,32 +66,8 @@
            }
         }
 
-        //century code
-        var cent;
-        if ((YY >= 1500)&&(YY <= 1599)){
-          code===0;
-        }
-        else if((YY >= 1600)&&(YY <= 1699)){
-          code===6;
-        }
-        else if ((YY >= 1700)&&(YY <= 1799)){
-          code===4;
-        }
-        else if ((YY >= 1800)&&(YY <= 1899)){
-          code===2;
-        }
-        else if ((YY >= 1900)&&(YY <= 1999)){
-          code===0;
-        }
-        else if ((YY >= 2000)&&(YY <= 1799)){
-          code===6;
-        }
-        else {
-          alert("invalid input");
-        }
-
         //  formular code
-        function getDay(form) {
+        function count(form) {
            var DD = parseInt(form.days.value)
            if ((DD < 0) || (DD > 31)) {
               alert("invalid input");
@@ -122,14 +80,14 @@
            if (YY < 1500) {
               alert("invalid input");
            }
-           /*var AA = parseInt(form.akan.value)
+           var AA = parseInt(form.akan.value)
            if (AA == Male){
              document.write(name);
            }
            var KK = parseInt(form.akan.value)
            if (AA == Female){
              document.write(name);
-           }*/
+           }
            var f = parseInt(YY-1/100+1)
            var o = parseInt((f/4)-2*f-1)
            var r = parseInt(5*YY/4)
@@ -137,7 +95,7 @@
            var u = DD
            var l = parseInt(f+o+r+m+DD)
            var a = parseInt(l/7)
-           form.date.value = months[MM]+" "+form.days.value +", "+form.years.value
+           form.date.value = month[MM]+" "+form.days.value +", "+form.years.value
            form.week.value = day[a]
            
            
@@ -170,7 +128,7 @@
               <p><input type="radio" name="Male" value="gender">Male</p>
               <p><input type="radio" name="Female" value="gender">Female</p>
 
-              <p><input type="button" value="submit" onclick="getDay(form)"> 
+              <p><input type="button" value="submit" onclick="count(form)"> 
                 <input type="reset" value="cancel"> </p>
 
               <p>Birth date: <input type="text" name="date" size="20"> </p>
