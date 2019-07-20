@@ -16,14 +16,6 @@
 </head>
 <body style="background-color:darkslategrey;">
     <script LANGUAGE="JavaScript">
-                        
-        // Array code
-        function putNumber(p) {
-           this.length = p;
-           for (var n = 1; n <=p; n++) {
-             this[n] = 0;
-           }
-        }
         
         //days code
         day = putNumber(7);
@@ -75,10 +67,52 @@
         gender[M] = "Male"
         gender[F] = "Female"
 
+         // Array code
+         function putNumber(p) {
+           this.length = p;
+           for (var n = 1; n <=p; n++) {
+             this[n] = 0;
+           }
+        }
+
         //century code
         var cent;
-        if(YY > 1500)&&(YY <= 1599){
+        if ((YY >= 1500)&&(YY <= 1599)){
+          code===0;
+        }
+        else if((YY >= 1600)&&(YY <= 1699)){
+          code===6;
+        }
+        else if ((YY >= 1700)&&(YY <= 1799)){
+          code===4;
+        }
+        else if ((YY >= 1800)&&(YY <= 1899)){
+          code===2;
+        }
+        else if ((YY >= 1900)&&(YY <= 1999)){
+          code===0;
+        }
+        else if ((YY >= 2000)&&(YY <= 1799)){
+          code===6;
+        }
+        else {
+          alert("invalid input");
+        }
 
+        //  formular code
+        function getDay(form) {
+           var DD = parseInt(form.days.value)
+           if ((DD < 0) || (DD > 31)) {
+              alert("invalid input");
+           }
+           var MM = parseInt(form.months.value)
+           if ((MM < 0) || (MM > 12)) {
+              alert("invalid input");
+           } 
+           var YY = parseInt(form.years.value)
+           if (YY < 1500) {
+              alert("invalid input");
+           } 
         }
         
               
