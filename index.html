@@ -76,27 +76,14 @@
         gender[F] = "Female"
 
         //century code
-        cent = putNumber 
-        
+        var cent;
+        if(YY > 1500)&&(YY <= 1599){
 
-        //week days function code
-        function compute(form) {
-          var YY = parseInt(form.years.value)
-          if (YY < 2000) {
-              alert("you are very young")
-          }
-          var MM = parseInt(form.months.value)
-          if ((MM < 0) || (MM > 12)) {
-              alert("invalid input")
-          }
-          var DD = parseInt(form.days.value)
-          if ((DD < 0) || (DD > 31)) {
-              alert("invalid input")
-          }
         }
+        
               
         </script>
-    <div class="well" style="margin-left:100px;margin-right:100px;">
+    <div class="well" style="margin-left:100px;margin-right:100px;margin-top:20px;">
         <div class="container text-center">
       
             <h1><strong>Akan Name finder</strong></h1>
@@ -104,7 +91,7 @@
         </div> 
     </div>    
     
-        <div class="well" style="background-image:url(pexels-photo-235994.jpeg); background-size: cover; font-weight: 700; width: 100%;">
+        <div class="well" style="background-image:url(pexels-photo-235994.jpeg); background-size: cover; font-weight: 700; width: 100%;height: 450px;">
                 
                         
             <h3><strong>You want to know the day you were born and your akan name?</strong></h3>
@@ -117,8 +104,8 @@
               <p>Enter the year: <input type="text" name="years" size="6"> </p>
 
               <p>Gender:</p>
-              <p><input type="checkbox" name="gender" value="Male">Male</p>
-              <p><input type="checkbox" name="gender" value="Female">Female</p>
+              <p><input type="radio" name="gender" value="Male">Male</p>
+              <p><input type="radio" name="gender" value="Female">Female</p>
 
               <p><input type="button" value="submit" onclick="compute(form)"> 
                 <input type="reset" value="cancel"> </p>
