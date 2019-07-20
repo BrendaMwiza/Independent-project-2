@@ -67,10 +67,10 @@
         gender[M] = "Male"
         gender[F] = "Female"
         if (gender == Male){
-          document.getElementByValue;
+          document.getElementsByName;
         }
         else if (gender == Female){
-          document.getElementByValue;
+          document.getElementsByName;
         }
         else {
           alert("please click on your gender");
@@ -126,7 +126,15 @@
            if ((AA == Male) || (AA == Female)){
              document.write(name);
            }
-           var f = DD
+           var f = parseInt(YY-1/100+1)
+           var o = parseInt((f/4)-2*f-1)
+           var r = parseInt(5*YY/4)
+           var m = parseInt(26*(MM+1)/10)
+           var u = DD
+           var l = parseInt(f+o+r+m+DD)
+           var a = parseInt(l/7)
+           form.date.value = months[MM]+" "+form.days.value +", "+form.years.value
+           form.week.value = day[a]
            
            
         }
@@ -155,8 +163,8 @@
               <p>Enter the year: <input type="text" name="years" size="6"> </p>
 
               <p>Gender:</p>
-              <p><input type="radio" name="gender" value="Male">Male</p>
-              <p><input type="radio" name="gender" value="Female">Female</p>
+              <p><input type="radio" name="Male" value="gender">Male</p>
+              <p><input type="radio" name="Female" value="gender">Female</p>
 
               <p><input type="button" value="submit" onclick="getDay(this.form)"> 
                 <input type="reset" value="cancel"> </p>
