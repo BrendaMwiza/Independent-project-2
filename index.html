@@ -87,7 +87,7 @@
            if (AA == Female){
              document.write(name);
            }
-           var f = parseInt(YY-1/100+1)
+           var f = parseInt(YY/100+1)
            var o = parseInt((f/4)-2*f-1)
            var r = parseInt(5*YY/4)
            var m = parseInt(26*(MM+1)/10)
@@ -95,8 +95,8 @@
            var l = parseInt(f+o+r+m+DD)
            var a = parseInt(l%7)
            form.date.value = form.days.value +","+ form.months.value+","+ form.years.value
-           form.week.value = day[a]
-           form.akan.value = AA || KK
+           form.week.value =  parseInt(l%7)
+           form.akan.value = Male || Female
            
            
         }
