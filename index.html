@@ -19,7 +19,7 @@
         
         //days code
         day = putNumber(7);
-        day["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+        day = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
         // male akan names code
         name = putNumber(7);
@@ -27,30 +27,30 @@
 
         // female akan names code 
         name = putNumber(7);
-        nameF = ["Ama", "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua"]
+        nameF = ["Ama", "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua"];
         
         //months code
         month = putNumber(12);
-        month[1] = "January" 
-        month[2] = "February" 
-        month[3] = "March" 
-        month[4] = "April" 
-        month[5] = "May" 
-        month[6] = "June" 
-        month[7] = "July" 
-        month[8] = "August"
-        month[9] = "September" 
-        month[10] = "October"
-        month[11] = "November"
-        month[12] = "December"
+        month[1] = "January"; 
+        month[2] = "February"; 
+        month[3] = "March"; 
+        month[4] = "April"; 
+        month[5] = "May"; 
+        month[6] = "June"; 
+        month[7] = "July"; 
+        month[8] = "August";
+        month[9] = "September"; 
+        month[10] = "October";
+        month[11] = "November";
+        month[12] = "December";
 
         // gender code
         gender = [ "Male", "Female"]
         if (nameM === Male){
-          document.getElementsById("akan").innerHTML=nameM[Math.round(a)];
+          document.getElementsById("Male");
         }
         else if ( nameF === Female){
-          document.getElementsById("akan").innerHTML=nameF[Math.round(a)];
+          document.getElementsById("Female");
         }
         else {
           alert("please click on your gender");
@@ -60,43 +60,48 @@
          function putNumber(p) {
            this.length = p;
            for (var n = 1; n <=p; n++) {
-             this[n] = 0;
+             this[n] = 1;
            }
         }
 
         //  formular code
         function count(form) {
-           var DD = parseInt(form.days.value)
+           var DD = parseInt(form.days.value);
            if ((DD < 0) || (DD > 31)) {
               alert("invalid input");
            }
-           var MM = parseInt(form.months.value)
+           var MM = parseInt(form.months.value);
            if ((MM < 0) || (MM > 12)) {
               alert("invalid input");
            } 
-           var YY = parseInt(form.years.value)
+           var YY = parseInt(form.years.value);
            if (YY < 1500) {
               alert("invalid input");
            }
-           var AA = parseInt(form.akan.value)
+           var AA = parseInt(form.akan.value);
            if (AA == Male){
              document.write(akan);
            }
-           var KK = parseInt(form.akan.value)
+           var KK = parseInt(form.akan.value);
            if (AA == Female){
              document.write(akan);
            }
-           var f = parseInt(YY/100+1)
-           var o = parseInt((f/4)-2*f-1)
-           var r = parseInt(5*YY/4)
-           var m = parseInt(26*(MM+1)/10)
-           var u = DD
-           var l = parseInt(f+o+r+m+DD)
-           var a = parseInt(l%7)
-           form.date.value = form.days.value +","+ form.months.value+","+ form.years.value
+           var f = parseInt(YY/100+1);
+           var o = parseInt((f/4)-2*f-1);
+           var r = parseInt(5*YY/4);
+           var m = parseInt(26*(MM+1)/10);
+           var u = DD;
+           var l = parseInt(f+o+r+m+DD);
+           var a = parseInt(l%7);
+           form.date.value = form.days.value +"/"+ form.months.value+"/"+ form.years.value
            form.week.value =  parseInt(l%7)
-           form.akan.value = akan
-           
+
+
+           birthday.innerHTML = day[7];
+           akan.innerHTML = nameM[7];
+
+           birthday.innerHTML = day[7];
+           akan.innerHTML = nameF[7];
            
         }
         
@@ -131,7 +136,7 @@
                 <input type="reset" value="cancel"> </p>
 
               <p>Birth date: <input type="text" name="date" size="20"> </p>
-              <p>Week day: <input type="text" name="week" size="20"> </p>
+              <p>Week day: <input type="text" name="week" size="20" id="birthday"> </p>
               <p>Your Akan name is: <input type="text" name="akan" size="20" id="akan"> </p>
             </form>
                         
