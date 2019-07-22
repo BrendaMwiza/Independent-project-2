@@ -19,15 +19,15 @@
         
         //days code
         day = putNumber(7);
-        day["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        day["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
         // male akan names code
         name = putNumber(7);
-        name["Kwame", "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi"];
+        nameM = ["Kwame", "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi"];
 
         // female akan names code 
         name = putNumber(7);
-        name["Ama", "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua"]
+        nameF = ["Ama", "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua"]
         
         //months code
         month = putNumber(12);
@@ -45,19 +45,18 @@
         month[12] = "December"
 
         // gender code
-        gender = putNumber(2);
-        gender[ "Male", "Female"]
-        if (gender == Male){
-          document.getElementsById ().innerHTML=Male[(Math.round)];
+        gender = [ "Male", "Female"]
+        if (nameM === Male){
+          document.getElementsById("akan").innerHTML=nameM[Math.round(a)];
         }
-        else if (gender == Female){
-          document.getElementsById ().innerHTML=Female[(Math.round)];
+        else if ( nameF === Female){
+          document.getElementsById("akan").innerHTML=nameF[Math.round(a)];
         }
         else {
           alert("please click on your gender");
         }
 
-         // Array code
+         // Array function
          function putNumber(p) {
            this.length = p;
            for (var n = 1; n <=p; n++) {
@@ -81,11 +80,11 @@
            }
            var AA = parseInt(form.akan.value)
            if (AA == Male){
-             document.write(name);
+             document.write(akan);
            }
            var KK = parseInt(form.akan.value)
            if (AA == Female){
-             document.write(name);
+             document.write(akan);
            }
            var f = parseInt(YY/100+1)
            var o = parseInt((f/4)-2*f-1)
@@ -96,7 +95,7 @@
            var a = parseInt(l%7)
            form.date.value = form.days.value +","+ form.months.value+","+ form.years.value
            form.week.value =  parseInt(l%7)
-           form.akan.value = Male || Female
+           form.akan.value = akan
            
            
         }
@@ -133,7 +132,7 @@
 
               <p>Birth date: <input type="text" name="date" size="20"> </p>
               <p>Week day: <input type="text" name="week" size="20"> </p>
-              <p>Your Akan name: <input type="text" name="akan" size="20"> </p>
+              <p>Your Akan name is: <input type="text" name="akan" size="20" id="akan"> </p>
             </form>
                         
 
