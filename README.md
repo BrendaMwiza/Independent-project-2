@@ -20,5 +20,6 @@
   . Permission is granted and free of charge to any person obtaining a copy. 
 
 # BDD
-    
+    input: For one to know thier akan name they have to type the day, month, and the year they were born and chose their gender.
+    output: then you get your akan name corresponding with the day you were born.
 
