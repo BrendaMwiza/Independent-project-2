@@ -7,7 +7,7 @@
 
 # Project setup instructions
   to start using this project apply the following commands:
-  . git clone  https://brendamwiza.github.io/My-Portfolio/
+  . git clone  https://github.com/BrendaMwiza/Independent-project-2.git
   . code .(for visual studio code)
   . atom .
 
@@ -22,4 +22,7 @@
 # BDD
     input: For one to know thier akan name they have to type the day, month, and the year they were born and chose their gender.
     output: then you get your akan name corresponding with the day you were born.
+
+# Contacts
+    brendabrizy@gmail.com    
 
